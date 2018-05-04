@@ -1,65 +1,104 @@
-body {
-    background: url('..images/logo.png');
-}
-
 * {
     margin: 0;
     box-sizing: border-box;
+    text-align: center;
     font-family: 'Raleway', sans-serif;
-    color: #c0c0c0;
+    color: #808080;
+    text-shadow: 1px 1px 5px rgba(128, 128, 128, 0.8);
 }
 
-header > .about {
-    height: 30vh;
+body {
+    background-image: url("../images/background.png");
+    background-size: 23vh;
+}
+
+nav {
+    height: 100vh;
     width: 100vw;
 }
 
-header > .about > h1 {
-    line-height: 30vh;
-    text-align: center;
+/* ========== NAV ========== */
+
+nav > .about {
+    height: 20vh;
+    width: 35vw;
+    line-height: 20vh;
+    margin: auto;
 }
 
-/*
-========== portfolio ===========
- */
+.about:hover {
+    background: url("../images/about.png") no-repeat center;
+    background-size: contain;
+}
 
-header > .portfolio {
-    height: 30vh;
-    width: 50vw;
+nav > .portfolio {
+    height: 20vh;
+    width: 35vw;
+    line-height: 20vh;
     float: left;
 }
 
-header > .portfolio > h1 {
-    line-height: 30vh;
-    text-align: center;
+.portfolio:hover {
+    background: url("../images/portfolio.png") no-repeat center;
+    background-size: contain;
 }
 
-/*
-========== contact ===========
- */
+nav > .home {
+    height: 20vh;
+    width: 30vw;
+    float: left;
+    background: url("../images/logo.png") no-repeat center;
+    background-size: 20vh;
+}
 
- header > .contact {
-    height: 30vh;
-    width: 50vw;
+nav > .contact {
+    height: 20vh;
+    width: 35vw;
+    line-height: 20vh;
     float: left;
 }
 
-header > .contact > h1 {
-    line-height: 30vh;
-    text-align: center;
+.contact:hover {
+    background: url("../images/contact.png") no-repeat center;
+    background-size: contain;
 }
 
-/*
-========== home ===========
- */
+/* ========== CONTENT ========== */
 
-header > .home {
-    height: 40vh;
+nav > .main {
+    height: 60vh;
     width: 100vw;
     clear: both;
 }
 
-header > .home > h1 {
-    line-height: 40vh;
-    text-align: center;
+.main > #intro {
+    max-width: 80vw;
+    margin: auto;
+    line-height: 60vh;
+}
+
+.main > #content {
+    max-width: 80vw;
+    margin: 10vh auto;
+    text-align: justify;
+}
+
+.home-bg {
+    background: url("../images/FrederickAcorda.png") no-repeat center;
+    background-size: contain;
+}
+
+.about-bg {
+    background: url("../images/about-bg.png") no-repeat center;
+    background-size: contain;
+}
+
+.portfolio-bg {
+    background: url("../images/portfolio-bg.png") no-repeat center;
+    background-size: contain;
+}
+
+.contact-bg {
+    background: url("../images/contact-bg.png") no-repeat center;
+    background-size: contain;
 }

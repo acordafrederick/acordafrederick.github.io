@@ -1,0 +1,65 @@
+body {
+    background: url('..images/logo.png');
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: #c0c0c0;
+}
+
+header > .about {
+    height: 30vh;
+    width: 100vw;
+}
+
+header > .about > h1 {
+    line-height: 30vh;
+    text-align: center;
+}
+
+/*
+========== portfolio ===========
+ */
+
+header > .portfolio {
+    height: 30vh;
+    width: 50vw;
+    float: left;
+}
+
+header > .portfolio > h1 {
+    line-height: 30vh;
+    text-align: center;
+}
+
+/*
+========== contact ===========
+ */
+
+ header > .contact {
+    height: 30vh;
+    width: 50vw;
+    float: left;
+}
+
+header > .contact > h1 {
+    line-height: 30vh;
+    text-align: center;
+}
+
+/*
+========== home ===========
+ */
+
+header > .home {
+    height: 40vh;
+    width: 100vw;
+    clear: both;
+}
+
+header > .home > h1 {
+    line-height: 40vh;
+    text-align: center;
+}

@@ -1,29 +1,60 @@
+$(".home, #about, #work, #contact").hide();
+
 $(document).ready(function(){
 
-    $("#content").hide();
-    $("#intro h1").addClass("home-bg");
-
-    $(".home").click(function() {
-        $("#intro h1").css("color", "rgba(128, 128, 128, 1)").removeClass("about-bg portfolio-bg contact-bg").addClass("home-bg");
-        $("#content").hide();
-    })
+    $(window).scroll(function(){
+        const scroll = $(window).scrollTop();
+        if (scroll > 0) {
+            $("nav").addClass("nav-scroll");
+        }
+        else {
+            $("nav").removeClass("nav-scroll");
+        }
+    });
 
     $(".about").click(function() {
-        $("#intro h1").css("color", "rgba(128, 128, 128, 0)").removeClass("home-bg portfolio-bg contact-bg").addClass("about-bg");
-        $("#content, #content #about").show();
-        $("#portfolio, #contact").hide();
+        $(this).addClass("active");
+        $(".work, .contact").removeClass("active");
+        $(".home, #about").fadeIn("swing").show();
+        $(".landing-page, #work, #contact").fadeOut("swing").hide();
     });
 
-    $(".portfolio").click(function() {
-        $("#intro h1").css("color", "rgba(128, 128, 128, 0)").removeClass("home-bg about-bg contact-bg").addClass("portfolio-bg");
-        $("#content, #content #portfolio").show();
-        $("#about, #contact").hide();
+    $(".work").click(function() {
+        $(this).addClass("active");
+        $(".about, .contact").removeClass("active");
+        $("#work, .home").fadeIn("swing").show();
+        $(".landing-page, #about, #contact").fadeOut("swing").hide();
     });
 
-    $(".contact").click(function() {
-        $("#intro h1").css("color", "rgba(128, 128, 128, 0)").removeClass("home-bg about-bg portfolio-bg").addClass("contact-bg");
-        $("#content, #content #contact").show();
-        $("#about, #portfolio").hide()
+    $(".contact, .for-hire").click(function() {
+        $(this).addClass("active");
+        $(".about, .work").removeClass("active");
+        $("#contact, .home").fadeIn("swing").show();
+        $(".landing-page, #about, #work").fadeOut("swing").hide();
+    });
+
+    $(".home").click(function() {
+        $(".about, .work, .contact").removeClass("active");
+        $(".logo, .landing-page").fadeIn("swing").show();
+        $(".home, #about, #work, #contact").fadeOut("swing").hide();
+    });
+
+    $(".fa-linkedin").hover(function() {
+        $(".link-names").text("LinkedIn");
     })
 
- });    // .ready()
+    $(".fa-github-square").hover(function() {
+        $(".link-names").text("GitHub");
+    });
+
+    $(".fa-envelope-square").hover(function() {
+        $(".link-names").text("sonjaire@gmail.com");
+    });
+
+    // $(".contact").click(function() {
+    //     $('html, body').animate({
+    //         scrollTop: $("#about").offset().top
+    //     }, 300);
+    // });
+});    // .ready()
+

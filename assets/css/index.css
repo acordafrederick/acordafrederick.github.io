@@ -1,104 +1,203 @@
+/* ========== global ========== */
+
 * {
     margin: 0;
     box-sizing: border-box;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
-    color: #808080;
-    text-shadow: 1px 1px 5px rgba(128, 128, 128, 0.8);
+    line-height: 150%;
+    font-family: 'Lato', sans-serif;
+    color: #a9a9a9;
+    text-decoration: none;
 }
 
 body {
-    background-image: url("../images/background.png");
-    background-size: 23vh;
-}
-
-nav {
+    background: url("../images/background.png") fixed;
+    background-size: 24vh;
     height: 100vh;
     width: 100vw;
 }
 
-/* ========== NAV ========== */
-
-nav > .about {
-    height: 20vh;
-    width: 35vw;
-    line-height: 20vh;
+.container {
+    max-width: 80vw;
     margin: auto;
 }
 
-.about:hover {
-    background: url("../images/about.png") no-repeat center;
-    background-size: contain;
-}
-
-nav > .portfolio {
-    height: 20vh;
-    width: 35vw;
-    line-height: 20vh;
-    float: left;
-}
-
-.portfolio:hover {
-    background: url("../images/portfolio.png") no-repeat center;
-    background-size: contain;
-}
-
-nav > .home {
-    height: 20vh;
-    width: 30vw;
-    float: left;
-    background: url("../images/logo.png") no-repeat center;
-    background-size: 20vh;
-}
-
-nav > .contact {
-    height: 20vh;
-    width: 35vw;
-    line-height: 20vh;
-    float: left;
-}
-
-.contact:hover {
-    background: url("../images/contact.png") no-repeat center;
-    background-size: contain;
-}
-
-/* ========== CONTENT ========== */
-
-nav > .main {
-    height: 60vh;
+.whitespace {
+    height: 15vh;
     width: 100vw;
-    clear: both;
 }
 
-.main > #intro {
-    max-width: 80vw;
+/* ========== nav ========== */
+
+nav {
+    height: 15vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-scroll {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 50px 0 rgba(0, 0, 0, 0.3);
+}
+
+.home,
+.about,
+.work,
+.contact {
+    height: 15vh;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 1vw;
+    line-height: 15vh;
+    font-weight: 700;
+    color: #add8e6;
+}
+
+.home {
+    background: url("../images/icon18.svg") no-repeat center;
+    background-size: 6vh;
+    color: rgba(128, 128, 128, 0);
+}
+
+.active {
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-color: #ffc0cb;
+}
+
+/* ========== content ========== */
+
+.content {
+    position: relative;
+}
+
+.logo {
+    background: url("../images/logo.svg") no-repeat top right;
+    background-size: 70vh;
+    height: 85vh;
+    width: 50vw;
+    float: left;
+}
+
+.for-hire {
+    height: 85vh;
+    width: 50vw;
+    background: url("../images/intro.svg") no-repeat top left;
+    background-size: 70vh;
+    float: left;
+    cursor: pointer;
+}
+
+/* ========== about ========== */
+
+#about > .who {
+    margin: 5vh auto;
+    height: 20vh;
+    background: url("../images/me.svg") no-repeat center;
+    background-size: contain;
+}
+
+#about > img {
+    height: 35vh;
+    width: 35vh;
+    display: block;
     margin: auto;
-    line-height: 60vh;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
+    -moz-box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
+    box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
 }
 
-.main > #content {
-    max-width: 80vw;
-    margin: 10vh auto;
-    text-align: justify;
-}
+/* ========== work ========== */
 
-.home-bg {
-    background: url("../images/FrederickAcorda.png") no-repeat center;
+#work > .portfolio {
+    margin: 5vh auto;
+    height: 20vh;
+    background: url("../images/portfolio.svg") no-repeat center;
     background-size: contain;
 }
 
-.about-bg {
-    background: url("../images/about-bg.png") no-repeat center;
+/* ========== contact ========== */
+
+#contact > .connect {
+    margin: 5vh auto;
+    height: 20vh;
+    background: url("../images/connect.svg") no-repeat center;
     background-size: contain;
 }
 
-.portfolio-bg {
-    background: url("../images/portfolio-bg.png") no-repeat center;
+#contact > .profiles,
+#contact > .link-names {
+    height: 10vh;
+    line-height: 10vh;
+}
+
+#contact > .resume {
+    height: 15vh;
+    background: url("../images/download-resume.svg") no-repeat center;
     background-size: contain;
 }
 
-.contact-bg {
-    background: url("../images/contact-bg.png") no-repeat center;
-    background-size: contain;
+.profiles i {
+    margin: 0 1vw;
+}
+
+i {
+    color: #add8e6;
+}
+
+/* ========== media queries ========== */
+@media (max-width: 1024px) {
+
+    .logo {
+        background: url("../images/logo.svg") no-repeat center;
+        background-size: contain;
+        height: 50vh;
+        width: 100vw;
+        float: none;
+    }
+
+    .for-hire {
+        height: 35vh;
+        width: 100vw;
+        background: url("../images/intro-landscape.svg") no-repeat center;
+        background-size: 35vh;
+        float: none;
+        cursor: pointer;
+    }
+
+    .link-names {
+        display: none;
+    }
+
+    #contact > .profiles {
+        height: 30vh;
+    }
+
+    .profiles i {
+        display: block;
+        line-height: 10vh;
+    }
+
+    .fa-linkedin::after {
+        content: " LinkedIn";
+        font: 700 0.8em 'Lato', sans-serif;
+        color: #a9a9a9;
+    }
+
+    .fa-github-square::after {
+        content: " GitHub";
+        font: 700 0.8em 'Lato', sans-serif;
+        color: #a9a9a9;
+    }
+
+    .fa-envelope-square::after {
+        content: " sonjaire@gmail.com";
+        font: 700 0.8em 'Lato', sans-serif;
+        color: #a9a9a9;
+    }
+
 }

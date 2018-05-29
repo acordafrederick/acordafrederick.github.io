@@ -4,9 +4,9 @@
     margin: 0;
     box-sizing: border-box;
     text-align: center;
-    line-height: 150%;
-    font-family: 'Lato', sans-serif;
+    font: 400 .9em/175% 'Lato', sans-serif;
     color: #a9a9a9;
+    word-spacing: 0.3em;
     text-decoration: none;
 }
 
@@ -35,6 +35,8 @@ nav {
     position: fixed;
     top: 0;
     z-index: 100;
+    /* background: url("../images/RippedUp.svg") no-repeat center;
+    background-size: cover; */
 }
 
 .nav-scroll {
@@ -46,26 +48,27 @@ nav {
 .about,
 .work,
 .contact {
-    height: 15vh;
+    /* height: 15vh; */
     display: inline-block;
     cursor: pointer;
-    margin: 0 1vw;
+    margin: 0 2vw;
     line-height: 15vh;
-    font-weight: 700;
-    color: #add8e6;
+    /* font-weight: 100; */
+    color: #a9a9a9;
+    /* transition: color 500s ease-in;
+    -o-transition: color 500s ease-in;
+    -moz-transition: color 500s ease-in;
+    -webkit-transition: color 500s ease-in; */
 }
 
 .home {
-    background: url("../images/icon18.svg") no-repeat center;
-    background-size: 6vh;
+    background: url("../images/FAIcon.svg") no-repeat center;
+    background-size: contain;
     color: rgba(128, 128, 128, 0);
 }
 
 .active {
-    text-decoration: underline;
-    text-decoration-line: underline;
-    text-decoration-style: double;
-    text-decoration-color: #ffc0cb;
+    color: #ffc0cb;
 }
 
 /* ========== content ========== */
@@ -75,19 +78,29 @@ nav {
 }
 
 .logo {
-    background: url("../images/logo.svg") no-repeat top right;
-    background-size: 70vh;
-    height: 85vh;
-    width: 50vw;
-    float: left;
+    background: url("../images/LandscapeLogo.svg") no-repeat center;
+    background-size: contain;
+    height: 55vh;
+    width: 100vw;
 }
 
-.for-hire {
-    height: 85vh;
-    width: 50vw;
-    background: url("../images/intro.svg") no-repeat top left;
-    background-size: 70vh;
-    float: left;
+.intro p {
+    height: 5vh;
+    width: 100vw;
+    line-height: 5vh;
+    font-size: 1.2em;
+    /* font: 400 1.1em/150% 'Lato', sans-serif; */
+    color: #a9a9a9;
+    /* background: url("../images/MyThings.svg") no-repeat center;
+    background-size: contain; */
+}
+
+.intro .hire-me {
+    height: 25vh;
+    width: 60vw;
+    margin: 0 auto;
+    background: url("../images/BuildTogether.svg") no-repeat center;
+    background-size: contain;
     cursor: pointer;
 }
 
@@ -96,19 +109,28 @@ nav {
 #about > .who {
     margin: 5vh auto;
     height: 20vh;
-    background: url("../images/me.svg") no-repeat center;
+    background: url("../images/Mabuhay.svg") no-repeat center;
     background-size: contain;
 }
 
-#about > img {
-    height: 35vh;
-    width: 35vh;
-    display: block;
-    margin: auto;
+#about img {
+    height: 200px;
+    /* width: 35vh; */
     border-radius: 50%;
     -webkit-box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
     -moz-box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
     box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
+    margin-bottom: 10vh;
+}
+
+#about p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 1.2em;
+}
+
+#about p:last-child {
+    margin-bottom: 10vh;
 }
 
 /* ========== work ========== */
@@ -116,7 +138,7 @@ nav {
 #work > .portfolio {
     margin: 5vh auto;
     height: 20vh;
-    background: url("../images/portfolio.svg") no-repeat center;
+    background: url("../images/InProgress.svg") no-repeat center;
     background-size: contain;
 }
 
@@ -125,79 +147,64 @@ nav {
 #contact > .connect {
     margin: 5vh auto;
     height: 20vh;
-    background: url("../images/connect.svg") no-repeat center;
+    background: url("../images/ConnectWithMe.svg") no-repeat center;
     background-size: contain;
 }
 
-#contact > .profiles,
-#contact > .link-names {
-    height: 10vh;
-    line-height: 10vh;
+.contacts {
+    max-width: 650px;
+    margin: auto;
 }
 
-#contact > .resume {
-    height: 15vh;
-    background: url("../images/download-resume.svg") no-repeat center;
-    background-size: contain;
+.contacts > .profiles {
+    /* height: 15vh; */
+    width: 50%;
+    float: left;
 }
 
-.profiles i {
-    margin: 0 1vw;
+.profiles p {
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 250%;
+    /* padding-left: 20vw; */
 }
 
 i {
     color: #add8e6;
 }
 
+.contacts > .resume {
+    /* height: 15vh; */
+    width: 50%;
+    float: right;
+}
+
+.resume img {
+    height: 13vh;
+    cursor: pointer;
+}
+
 /* ========== media queries ========== */
 @media (max-width: 1024px) {
 
     .logo {
-        background: url("../images/logo.svg") no-repeat center;
+        background: url("../images/PortraitLogo.svg") no-repeat center;
         background-size: contain;
         height: 50vh;
         width: 100vw;
         float: none;
     }
 
-    .for-hire {
-        height: 35vh;
-        width: 100vw;
-        background: url("../images/intro-landscape.svg") no-repeat center;
-        background-size: 35vh;
+    .contacts > .profiles,
+    .contacts > .resume {
         float: none;
-        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10vh;
     }
 
-    .link-names {
-        display: none;
-    }
-
-    #contact > .profiles {
-        height: 30vh;
-    }
-
-    .profiles i {
-        display: block;
-        line-height: 10vh;
-    }
-
-    .fa-linkedin::after {
-        content: " LinkedIn";
-        font: 700 0.8em 'Lato', sans-serif;
-        color: #a9a9a9;
-    }
-
-    .fa-github-square::after {
-        content: " GitHub";
-        font: 700 0.8em 'Lato', sans-serif;
-        color: #a9a9a9;
-    }
-
-    .fa-envelope-square::after {
-        content: " sonjaire@gmail.com";
-        font: 700 0.8em 'Lato', sans-serif;
-        color: #a9a9a9;
+    .contacts {
+        max-width: 100vw;
+        margin: 0;
     }
 
 }

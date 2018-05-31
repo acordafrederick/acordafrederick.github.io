@@ -115,10 +115,11 @@ nav {
     max-width: 650px;
     margin: auto;
     font-size: 1.2em;
+    text-align: justify;
 }
 
 #about p:last-child {
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
 }
 
 /* ========== work ========== */
@@ -156,6 +157,7 @@ nav {
     width: 250px;
     margin: auto;
     font-size: 1.3em;
+    text-align: justify;
 }
 
 #projects i {
@@ -170,7 +172,12 @@ nav {
 }
 
 .hack-jack .project-logo {
-    background: url("../images/screenshot.png") no-repeat center;
+    background: url("../images/HackJack.png") no-repeat center;
+    background-size: contain;
+}
+
+.vocal-local .project-logo {
+    background: url("../images/VocalLocal.jpg") no-repeat center;
     background-size: contain;
 }
 
@@ -234,8 +241,12 @@ i {
         width: 100%;
     }
 
+    #about p:last-child {
+        margin-bottom: 10vh;
+    }
+
     #projects p {
-        max-width: 319px;
+        width: 325px;
     }
 
     .contacts {

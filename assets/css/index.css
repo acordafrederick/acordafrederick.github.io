@@ -246,7 +246,7 @@ i {
     }
 
     #projects p {
-        width: 319px;
+        max-width: 319px;
     }
 
     .contacts {

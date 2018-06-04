@@ -1,5 +1,3 @@
-/* ========== global ========== */
-
 * {
     margin: 0;
     box-sizing: border-box;
@@ -178,6 +176,11 @@ nav {
 
 .vocal-local .project-logo {
     background: url("../images/VocalLocal.jpg") no-repeat center;
+    background-size: contain;
+}
+
+.fun-with-shadows .project-logo {
+    background: url("../images/TextShadows.jpg") no-repeat center;
     background-size: contain;
 }
 

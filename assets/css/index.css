@@ -222,7 +222,7 @@ i {
 
 .resume img {
     height: 13vh;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 /* ========== media queries ========== */

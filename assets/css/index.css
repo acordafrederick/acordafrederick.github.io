@@ -74,7 +74,7 @@ nav {
     width: 100vw;
 }
 
-.intro p {
+.intro .what-i-do {
     height: 5vh;
     width: 100vw;
     line-height: 5vh;
@@ -144,7 +144,7 @@ nav {
     float: left;
 }
 
-#projects h1 {
+#projects h4 {
     margin: 0 auto 2vh;
     text-align: center;
     font-size: 1.5em;
@@ -204,7 +204,7 @@ nav {
     margin-bottom: 10vh;
 }
 
-.profiles p {
+.profiles h5 {
     text-align: center;
     font-size: 1.3em;
     line-height: 250%;

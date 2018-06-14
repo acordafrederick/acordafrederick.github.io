@@ -169,19 +169,15 @@ nav {
     margin-bottom: 10vh;
 }
 
-.hack-jack .project-logo {
-    background: url("../images/HackJack.png") no-repeat center;
-    background-size: contain;
-}
-
-.vocal-local .project-logo {
-    background: url("../images/VocalLocal.jpg") no-repeat center;
-    background-size: contain;
-}
-
-.fun-with-shadows .project-logo {
-    background: url("../images/TextShadows.jpg") no-repeat center;
-    background-size: contain;
+.project-logo img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 /* ========== contact ========== */

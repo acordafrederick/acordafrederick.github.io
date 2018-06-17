@@ -100,23 +100,44 @@ nav {
     background-size: contain;
 }
 
-#about img {
-    width: 200px;
+#about .details {
+    max-width: 650px;
+    margin: auto;
+}
+
+.details .thumbnail {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10vh;
+}
+
+.thumbnail img {
+    width: 100%;
+    /* max-width: 50%; */
+    /* height: 100%; */
     border-radius: 50%;
     -webkit-box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
     -moz-box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
     box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
-    margin-bottom: 10vh;
 }
 
-#about p {
-    max-width: 650px;
+.details .info {
+    width: 50%;
+    float: left;
+}
+
+.info p {
+    /* max-width: 650px; */
+    /* margin: auto; */
+    /* font-size: 1.2em; */
+    /* text-align: justify; */
+    width: 250px;
     margin: auto;
     font-size: 1.2em;
     text-align: justify;
 }
 
-#about p:last-child {
+.info p:last-child {
     margin-bottom: 10vh;
 }
 
@@ -175,9 +196,9 @@ nav {
     height: 100%;
     margin: auto;
     border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
+    -moz-box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
+    box-shadow: 0 0 15px 1px rgba(128, 128, 128, 0.8);
 }
 
 /* ========== contact ========== */
@@ -222,6 +243,7 @@ i {
 }
 
 /* ========== media queries ========== */
+
 @media (max-width: 1024px) {
 
     .logo {
@@ -235,14 +257,21 @@ i {
     .contacts > .profiles,
     .contacts > .resume,
     #projects .project-info,
-    #projects .project-logo {
+    #projects .project-logo,
+    #about .info {
         float: none;
         width: 100%;
     }
 
-    #about p:last-child {
+    /* .details .thumbnail {
+        width: 100%;
+        margin: auto;
         margin-bottom: 10vh;
-    }
+    } */
+
+    /* #about p:last-child {
+        margin-bottom: 10vh;
+    } */
 
     #projects p {
         max-width: 319px;
